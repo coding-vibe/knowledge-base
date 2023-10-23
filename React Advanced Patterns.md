@@ -9,9 +9,9 @@
 ## Patterns in React
 
 1. Higher-Order Components - a higher-order component is a function that takes a component and returns a new component.
-  [HOC](https://legacy.reactjs.org/docs/higher-order-components.html)
+   [HOC](https://legacy.reactjs.org/docs/higher-order-components.html)
 
-2. Children API
+2. Children API:
 
 - props.children is a special prop that allows to pass and render child elements within a component. It is used to pass content between the opening and closing tags of a component.
   [props.children](https://react.dev/learn/passing-props-to-a-component#passing-jsx-as-children)
@@ -20,4 +20,4 @@
   [Children](https://react.dev/reference/react/Children)
 
 3. Render Props is a function prop that a component uses to know what to render.
-  [render_props](https://legacy.reactjs.org/docs/render-props.html)
+   [render_props](https://legacy.reactjs.org/docs/render-props.html)
