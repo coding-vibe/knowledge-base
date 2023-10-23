@@ -25,7 +25,6 @@
   - Children.only(children) asserts that children represent a single React element
   - Children.toArray(children) creates an array out of the children data structure
   - Children.count(children) calculates the number of children
-  - Children.toArray(children) turns the children data structure into a regular JavaScript array
 
 3. Render Props is a function prop that a component uses to know what to render.
    [render_props]https://legacy.reactjs.org/docs/render-props.html
