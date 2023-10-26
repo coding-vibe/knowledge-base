@@ -59,40 +59,40 @@ Useful links:
 
   - Called with new? Let's use the newly created object
 
-    ```
-    function Person(name) {
+  ```js
+  function Person(name) {
     this.name = name;
-    }
-    const person = new Person('John');
-    ```
+  }
+  const person = new Person("John");
+  ```
 
   - Called with call or apply (or bind)? We use the specified object
 
-  ```
+  ```js
   function greet() {
-  console.log(`Hello, ${this.name}!`);
+    console.log(`Hello, ${this.name}!`);
   }
-  const user = { name: 'Alice' };
+  const user = { name: "Alice" };
   greet.call(user);
   ```
 
   - Called with a context object owning the function call? Let's use this context object
 
-  ```
+  ```js
   const car = {
-  brand: 'Toyota',
-  start: function() {
-    console.log(`Starting the ${this.brand} car.`);
-  }
+    brand: "Toyota",
+    start: function () {
+      console.log(`Starting the ${this.brand} car.`);
+    },
   };
   car.start();
   ```
 
   - Default: undefined in strict mode, otherwise a global object
 
-  ```
+  ```js
   function sayHello() {
-  console.log(`Hello, ${this}`);
+    console.log(`Hello, ${this}`);
   }
   sayHello();
   ```
