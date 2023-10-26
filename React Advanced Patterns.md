@@ -12,8 +12,8 @@
 
 2. Children API:
 
-- [props.children](https://react.dev/learn/passing-props-to-a-component#passing-jsx-as-children) is a special prop that allows to pass and render child elements within a component. It is used to pass content between the opening and closing tags of a component
+  - [props.children](https://react.dev/learn/passing-props-to-a-component#passing-jsx-as-children) is a special prop that allows to pass and render child elements within a component. It is used to pass content between the opening and closing tags of a component
 
-- [Children](https://react.dev/reference/react/Children) allows to manipulate and transform the JSX you received as the children prop.
+  - [Children](https://react.dev/reference/react/Children) allows to manipulate and transform the JSX you received as the children prop.
 
 3. [Render_Props](https://legacy.reactjs.org/docs/render-props.html) is pattern for code reusage. Render function is used in the parent component with a data from a child component passed as arguments of render function.
