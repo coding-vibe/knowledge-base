@@ -1,4 +1,4 @@
-# 'this' and Closures in JavaScript
+# `this` and Closures in JavaScript
 
 ## Closures
 
