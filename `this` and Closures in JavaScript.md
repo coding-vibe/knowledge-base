@@ -55,12 +55,12 @@ Useful links:
 
 3. 4 rules of `this` from the book ['You don't know JavaScript'](https://github.com/azat-io/you-dont-know-js-ru/blob/master/this%20%26%20object%20prototypes/README.md#you-dont-know-js-this--object-prototypes)
 
-Determining the this binding for a function call requires finding the immediate point at which that function is called. As it turned out, four rules can be applied to a call point, in this order of priority:
+- Determining the this binding for a function call requires finding the immediate point at which that function is called. As it turned out, four rules can be applied to a call point, in this order of priority:
 
-- Called with new? Let's use the newly created object
-- Called with call or apply (or bind)? We use the specified object
-- Called with a context object owning the function call? Let's use this context object
-- Default: undefined in strict mode, otherwise a global object
+  - Called with new? Let's use the newly created object
+  - Called with call or apply (or bind)? We use the specified object
+  - Called with a context object owning the function call? Let's use this context object
+  - Default: undefined in strict mode, otherwise a global object
 
 4. `this` in arrow functions
 
