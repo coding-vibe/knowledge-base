@@ -19,5 +19,5 @@
 - Children allows to manipulate and transform the JSX you received as the children prop.
   [Children](https://react.dev/reference/react/Children)
 
-3. Render Props is a function prop that a component uses to know what to render.
+3. Render Props is pattern for code reusage. Render function is used in the parent component with a data from a child component passed as arguments of render function.
    [render_props](https://legacy.reactjs.org/docs/render-props.html)
