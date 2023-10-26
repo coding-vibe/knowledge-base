@@ -58,6 +58,13 @@ Useful links:
 - Determining the this binding for a function call requires finding the immediate point at which that function is called. As it turned out, four rules can be applied to a call point, in this order of priority:
 
   - Called with new? Let's use the newly created object
+
+    ```function Person(name) {
+    this.name = name;
+    }
+    const person = new Person('John');
+    ```
+
   - Called with call or apply (or bind)? We use the specified object
   - Called with a context object owning the function call? Let's use this context object
   - Default: undefined in strict mode, otherwise a global object
