@@ -98,6 +98,54 @@ function.apply(thisArg, [argumentsArr])
   sayHello();
   ```
 
-4. `this` in arrow functions
+4. [Implicit binding](https://github.com/azat-io/you-dont-know-js-ru/blob/master/this%20%26%20object%20prototypes/ch2.md#%D0%BD%D0%B5%D1%8F%D0%B2%D0%BD%D0%B0%D1%8F-%D0%BF%D1%80%D0%B8%D0%B2%D1%8F%D0%B7%D0%BA%D0%B0)
+
+- When a function is assigned to a variable or passed as an argument to another function and is then called without a specific object context, the 'This' keyword inside that function will refer to the global object, which is typically window in a browser environment
+
+```js
+function foo() {
+  console.log(this.a);
+}
+var obj = {
+  a: 2,
+  foo: foo,
+};
+var bar = obj.foo; // link/alias to the function! var a = "oh, global"; // `a` is also a property of the global object
+bar(); // "oh, global"
+```
+
+```js
+function foo() {
+  console.log(this.a);
+}
+function doFoo(fn) {
+  // `fn` — just another reference to `foo`
+  fn(); // <-- calling point! }
+  var obj = {
+    a: 2,
+    foo: foo,
+  };
+  var a = "oh, global"; // `a` is also a variable in the global object
+  doFoo(obj.foo); // "oh, global"
+}
+```
+
+5.  `this` in arrow functions
 
 - Arrow functions don't provide their own this binding (it retains the this value of the enclosing lexical context).
+
+6. [Partial functions] (https://javascript.info/bind#partial-functions)
+
+- Creation of a new function by correcting some parameters of the existing one
+
+```js
+function mul(a, b) {
+  return a * b;
+}
+
+let triple = mul.bind(null, 3);
+
+alert(triple(3)); // = mul(3, 3) = 9
+alert(triple(4)); // = mul(3, 4) = 12
+alert(triple(5)); // = mul(3, 5) = 15
+```
