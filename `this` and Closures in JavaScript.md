@@ -9,7 +9,7 @@ Useful links:
 
 1. Repeat variables scope
 
-- Variables used in closures have access to the scope in which they were created. This means they can access variables within the same function where the closures were created, as well as global variables.
+- Variables used in closures have access to the scope in which they were created.
 
 2. Lexical environment
 
@@ -21,7 +21,7 @@ Useful links:
 
 3. Closures in JavaScript
 
-- A closure is a function that remembers its outer variables and can access them.
+- A closure is a feature in JavaScript where an inner function has access to the outer (enclosing) function's variables — a scope chain.
 
 4. [Static and Dynamic scoping](https://www.linkedin.com/pulse/static-dynamic-scoping-javascript-wafula-allan/)
 
@@ -32,26 +32,27 @@ Useful links:
 
 1. Definition of [this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
 
-- 'This' keyword refers to an object that is executing the current piece of code. It references the object that is executing the current function. If the function being referenced is a regular function, 'this' references the global object.
+- 'This' keyword refers to an object that is executing the current piece of code.
 
 2. Purpose and differences between methods `.bind`, `.call`, `.apply`
 
-- .bind():
+- `.bind` create a new copy of the function and sets the this keyword
 
-  - Purpose: Creates a new function that is bound to a specific context (object) and returns that function
-  - Usage: To create a new function that will always execute in the specified context.
+```js
+function.bind(thisArg, optionalArguments)
+```
 
-- .call():
+- `.call` sets the this inside the function and immediately executes that function, also accepts a comma-separated list of arguments
 
-  - Purpose: Invokes a function with the specified context and passes arguments explicitly
-  - Usage: To call a function with a specific object at the moment of the call and pass the function's parameters.
+```js
+function.call(thisArg, arg1, agr2, ...)
+```
 
-- .apply():
+- `.apply` is very similar to the call function, but it accepts an array of arguments instead of comma separated values
 
-  - Purpose: Invokes a function with the specified context and passes parameters as an array
-  - Usage: To pass function arguments as an array and specify the calling context
-
-- The main difference between these methods lies in how they pass parameters and change the function's context. .bind() returns a new function with a bound context, .call() invokes the function with the specified context and passes parameters separately, and .apply() invokes the function with the specified context and passes parameters as an array.
+```js
+function.apply(thisArg, [argumentsArr])
+```
 
 3. 4 rules of `this` from the book ['You don't know JavaScript'](https://github.com/azat-io/you-dont-know-js-ru/blob/master/this%20%26%20object%20prototypes/README.md#you-dont-know-js-this--object-prototypes)
 
