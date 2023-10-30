@@ -89,7 +89,7 @@ function.apply(thisArg, [argumentsArr])
   car.start();
   ```
 
-  - Default: undefined in strict mode, otherwise a global object.
+  - Default: undefined in strict mode, otherwise a global object
 
   ```js
   function sayHello() {
@@ -134,7 +134,7 @@ function doFoo(fn) {
 
 - Arrow functions don't provide their own this binding (it retains the this value of the enclosing lexical context).
 
-6. [Partial functions] (https://javascript.info/bind#partial-functions)
+6. [Partial functions](https://javascript.info/bind#partial-functions)
 
 - Creation of a new function by correcting some parameters of the existing one
 
