@@ -1,0 +1,106 @@
+# Events in JS
+
+Useful links:
+
+- [Introduction to events](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events)
+
+## [Bubbling and capturing phase](https://uk.javascript.info/bubbling-and-capturing)
+
+- The standard DOM Events describes 3 phases of event propagation:
+
+  1. Capturing phase - the event goes down to the element
+  2. Target phase - the event reached the target element
+  3. Bubbling phase - the event bubbles up from the element
+
+## [Firing event programmatically](https://developer.mozilla.org/en-US/docs/Web/Events/Creating_and_triggering_events)
+
+- Events can be created:
+
+  1. with the Event constructor
+
+  ```js
+  const event = new Event("build");
+  // Listen for the event.
+  elem.addEventListener(
+    "build",
+    (e) => {
+      /_ … _/;
+    },
+    false
+  );
+  // Dispatch the event.
+  elem.dispatchEvent(event);
+  ```
+
+  2. with CustomEvent constructor
+
+  ```js
+  const event = new CustomEvent("build", { detail: elem.dataset.time });
+
+  function eventHandler(e) {
+    console.log(`The time is: ${e.detail}`);
+  }
+  ```
+
+  3. with document.createEvent()
+
+  ```js
+  // Create the event.
+  const event = document.createEvent("Event");
+
+  // Define that the event name is 'build'.
+  event.initEvent("build", true, true);
+
+  // Listen for the event.
+  elem.addEventListener(
+    "build",
+    (e) => {
+      // e.target matches elem
+    },
+    false
+  );
+  // target can be any Element or other EventTarget.
+  elem.dispatchEvent(event);
+  ```
+
+## Synthetic events in react vs. browser events
+
+- Event Consistency: Synthetic events ensure consistent event handling across browsers
+- Syntax: Handling synthetic events has a distinct syntax compared to browser events
+- Preventing Event Sticking: React automates event handling and mitigates event sticking issues
+- Component-based and Virtual DOM: React utilizes a component-based and virtual DOM model for event management
+- Delegation: Synthetic events can be readily delegated from parent to child components
+
+## Handling keyboard events in react - provide a snippet where a logger function will be called on any hotkey
+
+# UIs for manipulation with DOM
+
+## Methods for element selection
+
+- getElementById()
+- getElementsByTagName()
+- getElementsByName()
+- getElementsByClassName()
+- querySelector()
+- querySelectorAll()
+
+## Focusable elements
+
+- The :focus selector is used to select the element that has focus
+
+  - HTMLInputElement
+  - HTMLSelectElement
+  - HTMLTextAreaElement
+  - HTMLAnchorElement
+  - HTMLButtonElement
+  - HTMLAreaElement
+
+- [tabIndex](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex) - global attribute allows developers to make HTML elements focusable, allow or prevent them from being sequentially focusable and determine their relative ordering for sequential focus navigation
+  - Positive tabIndex is bad, because in the context of this attribute in HTML, a lower value indicates a higher priority in keyboard navigation
+
+### Difference between `e.target` and `e.currentTarget`
+
+- `e.target` - the target element that was clicked or interacted with
+- `e.currentTarget` - the element on which the event listener is set or the element currently handling the event during its propagation
+
+### [`e.stopPropagation`](https://developer.mozilla.org/en-US/docs/Web/API/Event/stopPropagation)
