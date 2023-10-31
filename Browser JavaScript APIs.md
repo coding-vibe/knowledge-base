@@ -96,9 +96,10 @@ Useful links:
 - [tabIndex](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex) - global attribute allows developers to make HTML elements focusable, allow or prevent them from being sequentially focusable and determine their relative ordering for sequential focus navigation
   - Positive tabIndex is bad, because in the context of this attribute in HTML, a lower value indicates a higher priority in keyboard navigation
 
-#### Difference between `e.target` and `e.currentTarget`
+## Additional information
+- Difference between `e.target` and `e.currentTarget`
 
-- `e.target` - the target element that was clicked or interacted with
-- `e.currentTarget` - the element on which the event listener is set or the element currently handling the event during its propagation
+  - `e.target` - the target element that was clicked or interacted with
+  - `e.currentTarget` - the element on which the event listener is set or the element currently handling the event during its propagation
 
-#### [`e.stopPropagation`](https://developer.mozilla.org/en-US/docs/Web/API/Event/stopPropagation)
+- [`e.stopPropagation`](https://developer.mozilla.org/en-US/docs/Web/API/Event/stopPropagation)
