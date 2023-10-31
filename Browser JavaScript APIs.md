@@ -71,8 +71,6 @@ Useful links:
 - Component-based and Virtual DOM: React utilizes a component-based and virtual DOM model for event management
 - Delegation: Synthetic events can be readily delegated from parent to child components
 
-## Handling keyboard events in react - provide a snippet where a logger function will be called on any hotkey
-
 # UIs for manipulation with DOM
 
 ## Methods for element selection
