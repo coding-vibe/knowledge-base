@@ -82,24 +82,33 @@ Useful links:
 - querySelector()
 - querySelectorAll()
 
+- document.getElementById() and other methods that return one element - returns null or DOM element that corresponds to a piece of HTML markup
+- document.querySelectorAll and other methods that return multiple elements - always returns a collection of Node elements - `NodeList`
+
 ## Focusable elements
 
-- The :focus selector is used to select the element that has focus
+- HTMLInputElement
+- HTMLSelectElement
+- HTMLTextAreaElement
+- HTMLAnchorElement
+- HTMLButtonElement
+- HTMLAreaElement
 
-  - HTMLInputElement
-  - HTMLSelectElement
-  - HTMLTextAreaElement
-  - HTMLAnchorElement
-  - HTMLButtonElement
-  - HTMLAreaElement
+- :focus selector is used to select the element that has focus
+- document.activeElement - returns currently focused element
 
 - [tabIndex](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex) - global attribute allows developers to make HTML elements focusable, allow or prevent them from being sequentially focusable and determine their relative ordering for sequential focus navigation
-  - Positive tabIndex is bad, because in the context of this attribute in HTML, a lower value indicates a higher priority in keyboard navigation
+  - 0 - enables focus for the elements that aren't focusable by default
+  - -1 - disables focus
+  - > 0 - will be focused in reverse order (i.e. from the lowest to the highest tabIndex)
 
 ## Additional information
+
 - Difference between `e.target` and `e.currentTarget`
 
   - `e.target` - the target element that was clicked or interacted with
   - `e.currentTarget` - the element on which the event listener is set or the element currently handling the event during its propagation
 
-- [`e.stopPropagation`](https://developer.mozilla.org/en-US/docs/Web/API/Event/stopPropagation)
+- [`e.stopPropagation`](https://developer.mozilla.org/en-US/docs/Web/API/Event/stopPropagation) is bad, because blocks:
+  - the trackers like Google Analytics
+  - the parent element from listening to the same event (example - close on nested menu on click)
