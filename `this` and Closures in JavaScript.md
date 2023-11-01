@@ -10,6 +10,7 @@ Useful links:
 1. Repeat variables scope
 
 - Variables used in closures have access to the scope in which they were created.
+- var declarations are function scoped while let and const are block scoped
 
 2. Lexical environment
 
@@ -21,7 +22,7 @@ Useful links:
 
 3. Closures in JavaScript
 
-- A closure is a feature in JavaScript where an inner function has access to the outer (enclosing) function's variables — a scope chain.
+- A closure is a mechanism that provides a search for variables in nested scopes if they are not found in the current scope
 
 4. [Static and Dynamic scoping](https://www.linkedin.com/pulse/static-dynamic-scoping-javascript-wafula-allan/)
 
