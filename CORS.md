@@ -7,3 +7,5 @@
 | Access-Control-Allow-Origin      | indicates whether response can be shared for given origin                             | `*` or <origin> or null        |
 | Access-Control-Allow-Credentials | indicates whether to expose response to frontend JS code                              | true                           |
 | Access-Control-Request-Method    | lets server know which HTTP method will be used in a next request after preflight one | DELETE, PATCH, POST, PUT, etc  |
+
+`Access-Control-Request-Method` is a request header of preflight request. Other methods are response headers.
