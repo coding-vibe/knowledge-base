@@ -100,7 +100,7 @@ Useful links:
 - [tabIndex](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex) - global attribute allows developers to make HTML elements focusable, allow or prevent them from being sequentially focusable and determine their relative ordering for sequential focus navigation
   - 0 - enables focus for the elements that aren't focusable by default
   - -1 - disables focus
-  - > 0 - will be focused in reverse order (i.e. from the lowest to the highest tabIndex)
+  - '>0' - will be focused in reverse order (i.e. from the lowest to the highest tabIndex)
 
 ## Additional information
 
