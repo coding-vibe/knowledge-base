@@ -49,5 +49,3 @@ Deferred value will 'lag behind' the latest value causing extra non-blocking ren
 Support streaming Suspense on server.
 `renderToPipeableStream`- for Node
 `renderToReadableStream` - for Deno
-
-### hooks - TODO:
