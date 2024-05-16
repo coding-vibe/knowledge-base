@@ -1,5 +1,7 @@
 # React 18
 
+- [React v18.0 Official Documentation] (https://react.dev/blog/2022/03/29/react-v18)
+
 ## Concurrent rendering
 
 - Rendering is interruptible - can wait for DOM updates and resume or abandon rendering at all.
