@@ -28,6 +28,10 @@ Added support not only for react events (v17) but **in promises, native event ha
 
 Transitions - non-urgent updates that can be interrupted if an update with bigger priority exists.
 
+- `useTransition`: Used to mark state updates as non-urgent, improving UI responsiveness.
+- `startTransition`: A function used within useTransition to mark specific updates as transitions.
+- `useDeferredValue`: Defers a value until the UI is less busy, preventing expensive computations from blocking the main UI thread.
+
 ```js
 const [isPending, startTransition] = useTransition();
 
