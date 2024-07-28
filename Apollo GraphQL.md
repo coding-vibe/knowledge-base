@@ -15,7 +15,7 @@
 ### Methods
 
 - `resetStore`
-  The `resetStore` method resets the Apollo Client store by refetching all active queries. This is useful when you want to clear the cache and then immediately reload the active queries with fresh data.
+  The `resetStore` method resets the Apollo Client store by refetching all active queries. This is useful when for clearing the cache and then immediately reload the active queries with fresh data.
 
 - `clearStore`
-  The `clearStore` method clears the Apollo Client store without refetching active queries. This is useful when you just want to clear the cache without triggering any refetch operations.
+  The `clearStore` method clears the Apollo Client store without refetching active queries. This is useful for clearing the cache without triggering any refetch operations.
