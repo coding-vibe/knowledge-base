@@ -9,3 +9,13 @@
 | `network-only`      | Always fetches data from the network, ignoring the cache completely.                                | Best for dynamic data that needs to be up-to-date, like a live news feed or real-time notifications.                         |
 | `cache-only`        | Only reads from the cache and never makes a network request.                                        | Useful for scenarios where you are sure the cache is up-to-date or when offline mode is required.                            |
 | `no-cache`          | Disables caching entirely; data is neither read from nor written to the cache.                      | Suitable for sensitive data that must always be fetched fresh, such as authentication tokens or financial transactions.      |
+
+## Reset Cache After Logout
+
+### Methods
+
+- `resetStore`
+  The `resetStore` method resets the Apollo Client store by refetching all active queries. This is useful when you want to clear the cache and then immediately reload the active queries with fresh data.
+
+- `clearStore`
+  The `clearStore` method clears the Apollo Client store without refetching active queries. This is useful when you just want to clear the cache without triggering any refetch operations.
