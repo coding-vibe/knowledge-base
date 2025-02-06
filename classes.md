@@ -139,7 +139,7 @@ class User {
   private password;
   protected email;
 
-  constructor(password, userName, email) {
+  constructor(password, username, email) {
     this.password = password;
     this.username = username;
     this.email = email;
