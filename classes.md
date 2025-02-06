@@ -146,7 +146,7 @@ class User {
   }
 }
 
-const user = new User('12345567', 'John');
+const user = new User('12345567', 'John', 'john@doe.com');
 
 console.log(user.password); // Will raise error
 console.log(user.username); // Ok
@@ -154,6 +154,10 @@ console.log(user.username); // Ok
 class Employee extends User {
   logEmail() {
     console.log(this.email); // Ok
+  }
+
+  updatePassword(newPassword) {
+    this.password = newPassword // Will raise error because `password` exists only in User type
   }
 }
 
