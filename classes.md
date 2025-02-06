@@ -137,9 +137,26 @@ console.log(book.getPages()); // Ok, will print 1000
 ```ts
 class User {
   private password;
+  protected email;
 
-  constructor(password) {
+  constructor(password, userName, email) {
     this.password = password;
+    this.username = username;
+    this.email = email;
   }
 }
+
+const user = new User('12345567', 'John');
+
+console.log(user.password); // Will raise error
+console.log(user.username); // Ok
+
+class Employee extends User {
+  logEmail() {
+    console.log(this.email); // Ok
+  }
+}
+
+const employee = new Employee('Qwerty123!', 'Joe');
+console.log(employee.email); // Will raise error
 ```
