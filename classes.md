@@ -100,7 +100,7 @@ interface ICoffeeMachine {
 }
 
 interface ElectricDevice {
-  switcher: 'on' | 'off';
+  switcher: SwitcherPosition;
 }
 
 const DEFAULT_COFFEE_MACHINE_CAPACITY = 4200;
