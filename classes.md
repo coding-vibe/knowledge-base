@@ -29,6 +29,10 @@ class LibraryBook {
     this._id = id; // Consider as private but still accessible
   }
 
+  print() {
+    console.log(LibraryBook.location) // Ok can use static properties and methods in instance methods but not vice versa
+  }
+
   // Variant 1
   static location = 'library';
   static printLocation() {
@@ -45,7 +49,7 @@ LibraryBook.printLocation = function () {
 };
 
 // Can be accessed outside:
-book = new Book('Jane Austen', 'Pride and Prejudice', 3);
+book = new LibraryBook('Jane Austen', 'Pride and Prejudice', 3);
 
 console.log(LibraryBook.printLocation());
 console.log(book.printLocation()); // Will raise TypeError
@@ -59,6 +63,10 @@ class Animal {
     this.name = name;
     this.age = age;
   }
+
+  static method() {
+    console.log('Fooo!')
+  }
 }
 
 class Cat extends Animal {
@@ -71,6 +79,7 @@ class Cat extends Animal {
 
 const cat = new Cat('Baggie', 2, 'black');
 
+Cat.foo() // Inherited in custom objects but not inherited in built-in like Array.prototype, Object.prototype etc
 console.log(cat.name); // Baggie
 
 // Inheritance checks
@@ -91,7 +100,7 @@ interface ICoffeeMachine {
 }
 
 interface ElectricDevice {
-  switcher: 'on' | 'off';
+  switcher: SwitcherPosition;
 }
 
 const DEFAULT_COFFEE_MACHINE_CAPACITY = 4200;
@@ -138,6 +147,8 @@ console.log(book.getPages()); // Ok, will print 1000
 class User {
   private password;
   protected email;
+
+  private readonly id: string;
 
   constructor(password, username, email) {
     this.password = password;
