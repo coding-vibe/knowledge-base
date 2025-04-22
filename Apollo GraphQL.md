@@ -1,5 +1,46 @@
 # Apollo GraphQL
 
+## Nullability in GraphQL
+
+By default all fields are nullable.
+
+`!` - non-nullable field
+
+```gql
+[Book]
+
+<!--
+Nullable array of nullable books. Valid options:
+- `null`
+- `[null]`
+- `[]`
+- `[Book]`
+-->
+
+[Book!]
+
+<!-- Nullable array of non-nullable books. Valid options:
+- `[]`
+- `null`
+- `[Book]`
+-->
+
+[Book!]!
+
+<!-- Non-nullable array of nullable books. Valid options:
+- `[]`
+- `[Book]`
+-->
+
+[Book]!
+
+<!-- Non-nullable array of nullable books. Valid options:
+- `[]`
+- `[Book]`
+- `[null]`
+-->
+```
+
 ## Cache Policies
 
 | Cache Policy Name   | Short Description                                                                                   | Example of Use Cases                                                                                                         |
