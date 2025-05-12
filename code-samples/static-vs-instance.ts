@@ -1,11 +1,19 @@
 class Counter {
   count: number;
 
-  static count = 0;
+  static count = 2;
 
-  constructor() {
-    this.count = 0;
+  constructor(initialValue: number = 1) {
+    this.count = initialValue;
     Counter.count++;
+
+    Counter.logCount();
+
+    this.printCount();
+  }
+
+  printCount() {
+    console.log(`Instance count: ${this.count}`); // 1
   }
 
   static getCount() {
@@ -13,6 +21,8 @@ class Counter {
   }
 
   static logCount() {
-    console.log(`Count: ${this.count}`);
+    console.log(`Count: ${this.count}`); // 2
   }
 }
+
+const counter = new Counter(1);
