@@ -1,4 +1,5 @@
-[Calculator](https://learn.javascript.ru/task/calculator)
+//Calculator
+
 let calculator = {
   read: function(a,b) { 
     this.a=a;
@@ -16,7 +17,8 @@ calculator.read(1, 2);
 alert( calculator.sum() );
 alert( calculator.mul() );
 
-[ChainsCall](https://learn.javascript.ru/task/chain-calls)
+//ChainsCall
+
 let ladder = {
   step: 0,
   up() {
@@ -35,7 +37,8 @@ let ladder = {
 
 ladder.up().up().down().showStep().down().showStep();
 
-[FixFunctionThatLoses"this"](https://learn.javascript.ru/task/question-use-bind)
+//Fix a function that loses "this"
+
 function askPassword(ok, fail) {
   let password = prompt("Пароль?", '');
   if (password == "rockstar") ok();
