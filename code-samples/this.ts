@@ -17,7 +17,7 @@ calculator.read(1, 2);
 alert( calculator.sum() );
 alert( calculator.mul() );
 
-[Chains call](https://learn.javascript.ru/task/chain-calls)
+[ChainsCall](https://learn.javascript.ru/task/chain-calls)
 
 let ladder = {
   step: 0,
@@ -37,7 +37,7 @@ let ladder = {
 
 ladder.up().up().down().showStep().down().showStep();
 
-[Fix a function that loses "this"](https://learn.javascript.ru/task/question-use-bind )
+[FixFunctionThatLoses"this"] (https://learn.javascript.ru/task/question-use-bind)
 function askPassword(ok, fail) {
   let password = prompt("Пароль?", '');
   if (password == "rockstar") ok();
