@@ -1,3 +1,5 @@
+//Rewrite to class
+
 class Clock {
   timer = null;
   
